@@ -1,3 +1,6 @@
+# shows how to manipulate bunch object
+from sklearn import datasets
+
 boston = load_boston();
 
 type(boston)
@@ -14,8 +17,17 @@ print(boston['DESCR'])
  
 boston['data'].shape
 
+#Using dot notation
 
-row = boston['data'][17]
-row.reshape(-1, 10)
+boston.data.shape
 
-boston['target'][17]
+boston.feature_names
+
+boston.data[17]
+
+boston.target[17]
+
+#Select Specific column
+boston.data[:,1]
+
+
